@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping("test/")
 public class TemplateControl {
 
     @Autowired
     TestService testService;
 @PostMapping("/add")
-    public TestClass updateAndParse(@RequestBody TestClass testClass){
+    public com.Trial2.TesterTrail.Domain.TestClass updateAndParse(@RequestBody com.Trial2.TesterTrail.Domain.TestClass testClass){
     return testService.updateTest(testClass);
 }
 }
